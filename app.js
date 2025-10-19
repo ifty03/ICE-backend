@@ -5,6 +5,7 @@ const cors = require("cors");
 const imageUploadRoutes = require("./routes/imageUpload.route");
 const heroRoutes = require("./routes/hero.route");
 const noticeRoutes = require("./routes/notice.route");
+const departmentRoutes = require("./routes/department.route");
 
 
 // Custom CORS middleware to set additional headers
@@ -39,6 +40,7 @@ app.use(express.json());
 app.use("/api/v1/upload", imageUploadRoutes);
 app.use("/api/v1/hero", heroRoutes);
 app.use("/api/v1/notice", noticeRoutes);
+app.use("/api/v1/department", departmentRoutes);
 
 //get image
 app.get("/images/:filename", function (req, res) {
